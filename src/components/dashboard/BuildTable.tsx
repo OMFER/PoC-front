@@ -1,17 +1,19 @@
 import React from 'react';
-import { Folder, MoreHorizontal } from 'lucide-react';
+import { Folder, MoreHorizontal, Loader2 } from 'lucide-react';
 import type { BuildRecord } from '../../types/build';
 
 interface BuildTableProps {
-  builds: BuildRecord[];
+  builds: BuildRecord[] | null;
   onSelectBuild: (build: BuildRecord) => void;
 }
 
 export const BuildTable: React.FC<BuildTableProps> = ({ builds, onSelectBuild }) => {
+  const isLoading = builds === null;
+  
   return (
-    <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden">
+    <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-y-auto max-h-[315px] relative">
       <table className="w-full text-left border-collapse">
-        <thead className="bg-gray-50/50 border-b border-gray-100 text-xs uppercase text-gray-500 font-semibold tracking-wider">
+        <thead className="sticky top-0 z-10 bg-gray-50 border-b border-gray-100 text-xs uppercase text-gray-500 font-semibold tracking-wider">
           <tr>
             <th className="px-6 py-5">Version</th>
             <th className="px-6 py-5">Version Flutter</th>
@@ -19,7 +21,16 @@ export const BuildTable: React.FC<BuildTableProps> = ({ builds, onSelectBuild })
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">
-          {builds.length > 0 ? (
+          {isLoading ? (
+            <tr>
+              <td colSpan={3} className="px-8 py-20">
+                <div className="flex flex-col items-center justify-center gap-3 text-gray-400">
+                  <Loader2 className="w-6 h-6 animate-spin text-[#1a0533]" />
+                  <span className="font-medium text-sm">Cargando builds...</span>
+                </div>
+              </td>
+            </tr>
+          ) : builds.length > 0 ? (
             builds.map((build) => (
               <tr key={build.id} className="hover:bg-gray-50/50 transition group">
                 <td className="px-6 py-5 font-semibold text-gray-900">{build.version}</td>
@@ -42,7 +53,7 @@ export const BuildTable: React.FC<BuildTableProps> = ({ builds, onSelectBuild })
             ))
           ) : (
             <tr>
-              <td colSpan={7} className="px-8 py-20 text-center text-gray-400">
+              <td colSpan={3} className="px-8 py-20 text-center text-gray-400">
                 No builds found for this component.
               </td>
             </tr>
