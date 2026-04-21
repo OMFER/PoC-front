@@ -3,7 +3,7 @@ import AccordionItem from './AccordionItem';
 import { defaultFAQ } from '../../mock/faqData';
 
 const FAQAccordion: React.FC = () => {
-  const [openId, setOpenId] = useState<number | null>(3); // Abrimos el 3 por defecto como en el diseño
+  const [openId, setOpenId] = useState<number | null>();
 
   const handleToggle = (id: number) => {
     setOpenId(openId === id ? null : id);
