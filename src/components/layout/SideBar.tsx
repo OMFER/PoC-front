@@ -21,7 +21,6 @@ export const Sidebar: React.FC = () => {
           <LayoutGrid className="w-5 h-5 text-white" />
         </button>
         
-        {/* Usamos opacity y width para una transición más limpia al ocultar el texto */}
         {!isCollapsed && (
           <div className="whitespace-nowrap animate-in fade-in duration-300">
             <div className="font-bold text-lg">App Pagos</div>
@@ -53,7 +52,6 @@ export const Sidebar: React.FC = () => {
               )}
             </a>
             
-            {/* Submenú: Solo se muestra si no está colapsado y es el item de projects */}
             {!isCollapsed && item.id === 'projects' && (
               <div className="pl-12 pt-2 space-y-2.5 text-sm text-white/70 whitespace-nowrap animate-in fade-in duration-300">
                 <div className="text-white font-medium border-l-2 border-white pl-3.5 -ml-px">App Pagos</div>

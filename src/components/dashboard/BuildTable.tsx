@@ -3,13 +3,11 @@ import { Folder, MoreHorizontal, Loader2 } from 'lucide-react';
 import type { BuildRecord } from '../../types/build';
 
 interface BuildTableProps {
-  // 1. Permitimos que builds sea null
   builds: BuildRecord[] | null;
   onSelectBuild: (build: BuildRecord) => void;
 }
 
 export const BuildTable: React.FC<BuildTableProps> = ({ builds, onSelectBuild }) => {
-  // 2. Lógica interna: si es null, está cargando.
   const isLoading = builds === null;
   
   return (
