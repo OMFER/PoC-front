@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Copy, Key, LogOut, Mail, X } from "lucide-react";
 import type { UserProfileModalProps } from "../../types/UserProfile";
 
@@ -51,6 +52,14 @@ const TokenSection = ({ token, onCopy }: { token: string, onCopy: () => void }) 
 
 const UserProfileModal: React.FC<UserProfileModalProps> = ({ user, onClose, onLogout }) => {
   const { copyToken } = useUserProfileActions(onClose, user?.token || '');
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    if (onLogout) {
+      onLogout();
+    }
+    navigate('/');
+  };
 
   if (!user) return null;
 
@@ -88,7 +97,7 @@ const UserProfileModal: React.FC<UserProfileModalProps> = ({ user, onClose, onLo
         {/* Footer */}
         <div className="p-4 bg-gray-50/50 border-t border-gray-100">
           <button 
-            onClick={onLogout}
+            onClick={handleLogout} // 4. Asignamos nuestra nueva función aquí
             className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 bg-white text-red-600 font-bold rounded-xl border border-gray-100 hover:bg-red-50 hover:border-red-100 transition-all active:scale-[0.98]"
           >
             <LogOut className="w-5 h-5" />
