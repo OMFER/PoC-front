@@ -1,7 +1,6 @@
 import React from 'react';
 import { LayoutGrid } from 'lucide-react';
 import LoginForm from '../components/logIn/Form';
-import Auth from '../components/logIn/auth';
 
 const LoginScreen: React.FC = () => {
   return (
@@ -17,28 +16,10 @@ const LoginScreen: React.FC = () => {
             <span className="text-3xl font-black text-[#1a0533] tracking-tight">Agnostiko</span>
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome back</h1>
-          <p className="text-gray-500 font-medium">Sign in to your development console</p>
         </div>
 
         {/* Componente del formulario con validaciones */}
         <LoginForm />
-
-        {/* Componente de botones de redes sociales */}
-        <Auth />
-
-        <p className="mt-10 text-center text-sm text-gray-500 font-medium">
-          Don't have an account?{' '}
-          <a href="#" className="text-[#1a0533] font-bold hover:underline">
-            Sign up
-          </a>
-        </p>
-      </div>
-
-      {/* Footer Links */}
-      <div className="mt-8 flex gap-8 text-xs font-bold text-gray-400 uppercase tracking-widest">
-        <a href="#" className="hover:text-gray-600 transition-colors">Privacy Policy</a>
-        <a href="#" className="hover:text-gray-600 transition-colors">Terms of Service</a>
-        <a href="#" className="hover:text-gray-600 transition-colors">System Status</a>
       </div>
     </div>
   );

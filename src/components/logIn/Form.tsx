@@ -44,7 +44,7 @@ const LoginForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-2.5 ml-1">
-          Email Address
+          Correo 
         </label>
         <div className="relative group">
           <Mail className={`absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 transition-colors ${errors.email ? 'text-red-400' : 'text-gray-400 group-focus-within:text-[#1a0533]'}`} />
@@ -65,9 +65,9 @@ const LoginForm: React.FC = () => {
       <div>
         <div className="flex justify-between items-center mb-2.5 ml-1">
           <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-            Password
+            Contraseña
           </label>
-          <a href="#" className="text-xs font-bold text-[#1a0533] hover:underline">Forgot password?</a>
+          <a href="#" className="text-xs font-bold text-[#1a0533] hover:underline">Olvidsaste la contraseña?</a>
         </div>
         <div className="relative group">
           <Lock className={`absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 transition-colors ${errors.password ? 'text-red-400' : 'text-gray-400 group-focus-within:text-[#1a0533]'}`} />
@@ -92,12 +92,12 @@ const LoginForm: React.FC = () => {
         {errors.password && <p className="text-red-500 text-xs mt-2 ml-1 font-medium">{errors.password}</p>}
       </div>
 
-      <div className="flex items-center gap-3 ml-1">
+      {/* <div className="flex items-center gap-3 ml-1">
         <input type="checkbox" id="remember" className="w-5 h-5 rounded-lg border-gray-300 text-[#1a0533] focus:ring-[#1a0533] transition-all" />
         <label htmlFor="remember" className="text-sm text-gray-600 font-medium select-none cursor-pointer">
           Remember me for 30 days
         </label>
-      </div>
+      </div> */}
 
       <button type="submit" className="w-full py-4 bg-[#1a0533] text-white font-bold rounded-2xl hover:bg-[#2a0852] transition-all shadow-lg shadow-[#1a0533]/20 active:scale-[0.98]">
         Sign In

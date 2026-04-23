@@ -1,14 +1,14 @@
 
-export interface BuildAsset {
+export interface VersionAsset {
   name: string;
   size: string;
   type: string;
 }
 
-export interface BuildRecord {
+export interface VersionsRecord {
   id: number;
   version: string;
   versionFlutter: string;
   component: string;
-  assets: BuildAsset[];
+  assets: VersionAsset[];
 }

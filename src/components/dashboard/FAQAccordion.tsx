@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AccordionItem from './AccordionItem';
+import AccordionItem from '../FAQ/AccordionItem';
 import { defaultFAQ } from '../../mock/faqData';
 
 const FAQAccordion: React.FC = () => {
