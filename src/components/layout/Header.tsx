@@ -13,7 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {
 
   return (
     <>
-      <header className="h-20 bg-white border-b border-gray-100 flex items-center justify-between px-10">
+      <header className="bg-[#1a0533] h-20 bg-white border-b border-gray-100 flex items-center justify-between px-10">
         <div className="flex items-center gap-2 text-sm text-gray-500">
           <Hexagon className="w-8 h-8 text-orange-600" />
         </div>

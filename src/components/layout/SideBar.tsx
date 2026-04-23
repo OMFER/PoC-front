@@ -23,8 +23,7 @@ export const Sidebar: React.FC = () => {
         
         {!isCollapsed && (
           <div className="whitespace-nowrap animate-in fade-in duration-300">
-            <div className="font-bold text-lg">App Pagos</div>
-            <div className="text-xs text-white/60">Development Console</div>
+            <div className="font-bold text-lg">Nuevo Front</div>
           </div>
         )}
       </div>

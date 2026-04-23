@@ -18,11 +18,11 @@ export const VersionsTable: React.FC<VersionsTableProps> = ({ builds, onSelectBu
   return (
     <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-y-auto max-h-[315px] relative">
       <table className="w-full text-left border-collapse">
-        <thead className="sticky top-0 z-10 bg-gray-50 border-b border-gray-100 text-xs uppercase text-gray-500 font-semibold tracking-wider">
+        <thead className=" bg-[#1a0533] sticky top-0 z-10 bg-gray-50 border-b border-gray-100 text-xs uppercase text-gray-500 font-semibold tracking-wider">
           <tr>
-            <th className="px-6 py-5">Versión</th>
-            <th className="px-6 py-5">Versión Flutter</th>
-            <th className="px-8 py-5 text-right">Actions</th>
+            <th className="bg-[#1a0533] text-white px-6 py-5">Versión</th>
+            <th className="bg-[#1a0533] text-white px-6 py-5">Versión Flutter</th>
+            <th className="bg-[#1a0533] text-white px-8 py-5 text-right">Actions</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-100">
