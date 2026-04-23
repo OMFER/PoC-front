@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import type { BuildRecord } from '../types/build';
+import type { VersionsRecord } from '../types/build';
 import { tabs, fetchBuilds } from '../mock/dashboardData';
 import { Sidebar } from '../components/layout/SideBar';
 import { Header } from '../components/layout/Header';
-import { BuildTable } from '../components/dashboard/BuildTable';
+import { VersionsTable } from '../components/dashboard/VersionsTable';
 import { DownloadModal } from '../components/dashboard/DownloadModal';
 import FAQAccordion from '../components/dashboard/FAQAccordion';
-import ChangelogSection from '../components/dashboard/changelog';
+import ChangelogSection from '../components/dashboard/Changelog';
 
 
 const useBuilds = (activeTab: string) => {
-  const [builds, setBuilds] = useState<BuildRecord[] | null>(null);
+  const [builds, setBuilds] = useState<VersionsRecord[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onTabChange })
 
 const AppPagosDashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState('BBVA');
-  const [selectedBuild, setSelectedBuild] = useState<BuildRecord | null>(null);
+  const [selectedBuild, setSelectedBuild] = useState<VersionsRecord | null>(null);
   
   const { builds, isLoading } = useBuilds(activeTab);
 
@@ -110,7 +110,7 @@ const AppPagosDashboard: React.FC = () => {
           </div>
           <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
 
-          <BuildTable 
+          <VersionsTable 
             builds={builds} 
             onSelectBuild={setSelectedBuild} 
           />
