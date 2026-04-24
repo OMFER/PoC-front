@@ -4,8 +4,8 @@ const ChangelogSection: React.FC = () => {
   return (
     <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden flex flex-col h-[400px]">
       {/* Header */}
-      <div className="px-8 py-6 border-b border-gray-100 flex items-center justify-between bg-white sticky top-0 z-10">
-        <h2 className="text-2xl font-bold text-[#1a0533]">Changelog Agnostiko BBVA</h2>
+      <div className="bg-[#1a0533] px-8 py-6 border-b border-gray-100 flex items-center justify-between sticky top-0 z-10">
+        <h2 className="text-2xl font-bold text-[#F9F9F9]">Changelog Agnostiko BBVA</h2>
       </div>
       {/* Content */}
       <div className="flex-1 overflow-y-auto p-8 space-y-10 custom-scrollbar">
@@ -39,11 +39,11 @@ const ChangelogSection: React.FC = () => {
           background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #e5e7eb;
+          background: #1a0533;
           border-radius: 10px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #d1d5db;
+          background: #1a0533;
         }
       `}</style>
     </div>

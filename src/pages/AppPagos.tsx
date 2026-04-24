@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import type { VersionsRecord } from '../types/build';
 import { tabs, fetchBuilds } from '../mock/dashboardData';
-import { Sidebar } from '../components/layout/SideBar';
+// import { Sidebar } from '../components/layout/SideBar';
 import { Header } from '../components/layout/Header';
 import { VersionsTable } from '../components/dashboard/VersionsTable';
 import { DownloadModal } from '../components/dashboard/DownloadModal';
@@ -94,7 +94,7 @@ const AppPagosDashboard: React.FC = () => {
 
   return (
     <div className="flex h-screen bg-[#F8F9FB] font-sans">
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       <main className="flex-1 flex flex-col overflow-hidden">
         <Header 
