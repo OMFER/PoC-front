@@ -36,7 +36,7 @@ const LoginForm: React.FC = () => {
 
     if (!hasErrors) {
       console.log('Logging in with:', { email, password });
-      navigate('/AppPagosDashboard');
+      navigate('/Home');
     }
   };
 
