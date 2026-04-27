@@ -8,7 +8,6 @@ import { DownloadModal } from '../components/dashboard/DownloadModal';
 import FAQAccordion from '../components/dashboard/FAQAccordion';
 import ChangelogSection from '../components/dashboard/Changelog';
 
-
 const useBuilds = (activeTab: string) => {
   const [builds, setBuilds] = useState<VersionsRecord[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -108,16 +107,13 @@ const AppPagosDashboard: React.FC = () => {
               Paquetes disponibles
             </h1>
           </div>
+          
           <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
+          <VersionsTable builds={builds} onSelectBuild={setSelectedBuild} />
 
-          <VersionsTable 
-            builds={builds} 
-            onSelectBuild={setSelectedBuild} 
-          />
-
-          <div className="mt-16 space-y-12 border-t border-gray-200 pt-12">
-            <FAQAccordion />
+          <div className="mt-16 space-y-15 ">
             <ChangelogSection />
+            <FAQAccordion />
           </div>
         </section>
       </main>

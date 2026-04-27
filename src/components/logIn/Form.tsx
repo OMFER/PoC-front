@@ -67,7 +67,7 @@ const LoginForm: React.FC = () => {
           <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-widest">
             Contraseña
           </label>
-          <a href="#" className="text-xs font-bold text-[#1a0533] hover:underline">Olvidsaste la contraseña?</a>
+          <a href="#" className="text-xs font-bold text-[#1a0533] hover:underline">Olvidaste la contraseña?</a>
         </div>
         <div className="relative group">
           <Lock className={`absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 transition-colors ${errors.password ? 'text-red-400' : 'text-gray-400 group-focus-within:text-[#1a0533]'}`} />
