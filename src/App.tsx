@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AppPagosDashboard from './pages/AppPagos';
+import Home from './pages/Home';
 import LoginScreen from './pages/LogIn';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LoginScreen />} />
           
-          <Route path="/AppPagosDashboard" element={<AppPagosDashboard />} />
+          <Route path="/Home" element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>
