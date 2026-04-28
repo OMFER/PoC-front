@@ -21,9 +21,9 @@ export const VersionsTable: React.FC<VersionsTableProps> = ({ builds, onSelectBu
         <table className="w-full text-left border-collapse">
           <thead className="bg-[#1a0533] sticky top-0 z-10 border-b border-gray-100 text-xs uppercase text-gray-500 font-semibold tracking-wider">
             <tr className="bg-[#1a0533]">
-              <th className="bg-[#1a0533] text-white px-6 py-5">Versión</th>
-              <th className="bg-[#1a0533] text-white px-6 py-5">Versión Flutter</th>
-              <th className="bg-[#1a0533] text-white px-8 py-5 text-right">Actions</th>
+              <th className="bg-[#1a0533] text-xl font-bold text-white px-6 py-5 pl-20 pr-6 text-left">Versión</th>
+              <th className="bg-[#1a0533] text-xl font-bold text-white px-6 py-5 ">Versión Flutter</th>
+              <th className="bg-[#1a0533] text-xl font-bold text-white px-8 py-5 text-center">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">

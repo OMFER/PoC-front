@@ -5,7 +5,7 @@ const ChangelogSection: React.FC = () => {
     <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden flex flex-col h-[400px]">
       {/* Header */}
       <div className="bg-[#1a0533] px-8 py-6 border-b border-gray-100 flex items-center justify-between sticky top-0 z-10">
-        <h2 className="text-2xl font-bold text-[#F9F9F9]">Changelog Agnostiko BBVA</h2>
+        <h2 className="text-xl font-bold text-white">Changelog Agnostiko BBVA</h2>
       </div>
       {/* Content */}
       <div className="flex-1 overflow-y-auto p-8 space-y-10 custom-scrollbar">
