@@ -11,7 +11,6 @@ export const Sidebar: React.FC = () => {
         isCollapsed ? 'w-[88px] px-4' : 'w-[260px] px-6'
       }`}
     >
-      {/* Header del Sidebar */}
       <div className={`flex items-center mb-10 mt-1 ${isCollapsed ? 'justify-center' : 'gap-3'}`}>
         <button 
           onClick={() => setIsCollapsed(!isCollapsed)}
@@ -28,7 +27,6 @@ export const Sidebar: React.FC = () => {
         )}
       </div>
 
-      {/* Navegación */}
       <nav className="flex-1 space-y-2">
         {sidebarItems.map((item) => (
           <div key={item.id}>
@@ -62,7 +60,6 @@ export const Sidebar: React.FC = () => {
         ))}
       </nav>
 
-      {/* Botón inferior */}
       <button 
         className={`flex items-center justify-center gap-2.5 bg-white text-[#1a0533] font-semibold rounded-xl mt-10 hover:bg-gray-100 transition-all ${
           isCollapsed ? 'w-12 h-12 p-0 mx-auto' : 'w-full py-3'
